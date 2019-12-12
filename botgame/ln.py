@@ -32,13 +32,13 @@ try:
 except ImportError:
     import urllib2
 #==============================================================================#
-try:
-    with open('token.txt','r') as tokens:
-        token = tokens.read()
-    print(str(token))
-except Exception as e:
-    maxgie = LINE(token)
-maxgie = LINE(token)
+#try:
+#    with open('token.txt','r') as tokens:
+#        token = tokens.read()
+#    print(str(token))
+#except Exception as e:
+maxgie = LINE()
+maxgie = LINE()
 maxgie.log("Auth Token : " + str(maxgie.authToken))
 
 waitOpen = codecs.open("Max2.json","r","utf-8")
