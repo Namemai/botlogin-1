@@ -32,13 +32,13 @@ try:
 except ImportError:
     import urllib2
 #==============================================================================#
-try:
-    with open('token.txt','r') as tokens:
-        token = tokens.read()
-    print(str(token))
-except Exception as e:
-    maxgie = LINE(token)
-maxgie = LINE(token)
+#try:
+#    with open('token.txt','r') as tokens:
+#        token = tokens.read()
+#    print(str(token))
+#except Exception as e:
+maxgie = LINE()
+maxgie = LINE()
 maxgie.log("Auth Token : " + str(maxgie.authToken))
 
 waitOpen = codecs.open("Max2.json","r","utf-8")
@@ -161,11 +161,11 @@ tagadd = {
     "tagss": False,
     "tags": False,
     "tag": "วิธีตั้งแทค \n- ตั้งแทค ข้อความที่ต้องการ",
-    "add": "🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟\nจำหน่ายบอททุกชนิด\nจำหน่ายเหรียญแท้&สติ้กเกอร์\nติดต่อข้อมูลอื่นๆ>คลิก<\n↪ http://line.me/ti/p/~.poohbear\nhttp://line.me/ti/p/~.install",
+    "add": "🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟\nจำหน่ายบอททุกชนิด\nจำหน่ายเหรียญแท้&สติ้กเกอร์\nติดต่อข้อมูลอื่นๆ>คลิก<\n↪ http://line.me/ti/p/~.poohbear\nhttps://line.me/ti/p/9P3vQS2cgd",
     "badd": "ระบบบล็อคคุณอัตโนมัติ",
     "wctext": "ยินดีต้อนรับเข้ากลุ่มนะครับ 😃",
     "lv": "บ๊ายบาย >< ขอให้เธอโชคดีงับ >_<",
-    "b": "⫸𖤍❍ ❍ ໂ တ้ ບ ລ็ ◐ の⫷\n🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟\nจำหน่ายบอททุกชนิด\nจำหน่ายเหรียญแท้&สติ้กเกอร์\nติดต่อข้อมูลอื่นๆ>คลิก<\n↪ http://line.me/ti/p/~.poohbear\nhttp://line.me/ti/p/~.install",
+    "b": "⫸𖤍❍ ❍ ໂ တ้ ບ ລ็ ◐ の⫷\n🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟\nจำหน่ายบอททุกชนิด\nจำหน่ายเหรียญแท้&สติ้กเกอร์\nติดต่อข้อมูลอื่นๆ>คลิก<\n↪ http://line.me/ti/p/~.poohbear\nhttps://line.me/ti/p/9P3vQS2cgd",
     "c":"Auto Like By. 🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟 ",
     "m": "สวัสดีครับ ทุกท่าน >_<",
 }
@@ -233,7 +233,7 @@ ProfileMe["statusMessage"] = maxgieProfile.statusMessage
 ProfileMe["pictureStatus"] = maxgieProfile.pictureStatus
 coverId = maxgie.getProfileDetail()["result"]["objectId"]
 ProfileMe["coverId"] = coverId
-all_Square = ["ue6245127d69b7edfc88835ec0d535cd6"]
+all_Square = ["ua26d317bf6c058a4c00aa93caee1ab0d"]
 for busht in allrepositories:
     for anding in all_Square:
         try:
@@ -407,7 +407,7 @@ def sendMentionFooter(to, mid, firstmessage, lastmessage):
         text += mention + str(lastmessage)
         nama = "{}".format(maxgie.getContact(maxgieMID).displayName)
         img = "http://dl.profile.line-cdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus)
-        ticket = "http://line.me/ti/p/~.install"
+        ticket = "https://line.me/ti/p/9P3vQS2cgd"
         maxgie.sendMessage(to, text, {'AGENT_LINK': ticket, 'AGENT_ICON': img, 'AGENT_NAME': nama, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         logError(error)
@@ -1034,7 +1034,7 @@ async def maxgieBot(op):
                          "size":"full",
                          "action": {
                              "type": "uri",
-                             "uri": "http://line.me/ti/p/~.install"
+                             "uri": "https://line.me/ti/p/9P3vQS2cgd"
                          }
                     },
                 }
@@ -1103,7 +1103,7 @@ async def maxgieBot(op):
                          "size":"full",
                          "action": {
                              "type": "uri",
-                             "uri": "http://line.me/ti/p/~.install"
+                             "uri": "https://line.me/ti/p/9P3vQS2cgd"
                          }
                     },
                 }
@@ -1842,7 +1842,7 @@ async def maxgieBot(op):
                                         "action": {
                                             "type":"uri",
                                             "label":"ผู้สร้าง",
-                                            "uri": "http://line.me/ti/p/~.install"
+                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                         },
                                     },
                                 ]
@@ -2028,7 +2028,7 @@ async def maxgieBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"✯L͙I͙N͙U͙X͙ H͙U͙N͙T͙E͙R͙ C͙L͙U͙B͙✯",
-                                                     "uri": "http://line.me/ti/p/~.install"
+                                                     "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                                  },
                                             },
                                         ]
@@ -2263,7 +2263,7 @@ async def maxgieBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"✯L͙I͙N͙U͙X͙ H͙U͙N͙T͙E͙R͙ C͙L͙U͙B͙✯",
-                                                     "uri": "http://line.me/ti/p/~.install"
+                                                     "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                                  },
                                             },
                                         ]
@@ -2369,7 +2369,7 @@ async def maxgieBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"✯L͙I͙N͙U͙X͙ H͙U͙N͙T͙E͙R͙ C͙L͙U͙B͙✯",
-                                                     "uri": "http://line.me/ti/p/~.install"                                                                                                                         
+                                                     "uri": "https://line.me/ti/p/9P3vQS2cgd"                                                                                                                         
                                                  },
                                             },
                                         ]
@@ -2538,7 +2538,7 @@ async def maxgieBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "http://line.me/ti/p/~.install"
+                                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                                         }
                                                     },
                                                     {
@@ -2610,7 +2610,7 @@ async def maxgieBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "http://line.me/ti/p/~.install"
+                                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                                         }
                                                     },
                                                     {
@@ -2696,7 +2696,7 @@ async def maxgieBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "http://line.me/ti/p/~.install"
+                                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                                         }
                                                     },
                                                     {
@@ -2857,7 +2857,7 @@ async def maxgieBot(op):
                         "sentBy": {
                              "label": "{}".format(maxgie.getContact(maxgieMID).displayName),
                              "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                             "linkUrl": "line://nv/profilePopup/mid=ue6245127d69b7edfc88835ec0d535cd6"
+                             "linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"
                         }
                     }
                     sendTemplate(to, data)
@@ -3609,7 +3609,7 @@ async def maxgieBot(op):
                                      "size": "full",
                                      "action": {
                                          "type": "uri",
-                                          "uri": "line://ti/p/~ue6245127d69b7edfc88835ec0d535cd6"
+                                          "uri": "line://ti/p/~ua26d317bf6c058a4c00aa93caee1ab0d"
                                      }
                                 }
                             ]
@@ -3624,24 +3624,24 @@ async def maxgieBot(op):
                         "sentBy": {
                              "label": "รีบอทสำเร็จ...",
                              "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                             "linkUrl": "line://nv/profilePopup/mid=ue6245127d69b7edfc88835ec0d535cd6"
+                             "linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"
                         }
                     }
                     sendTemplate(to, data)
                     restartBot()                  
                 if text.lower() == "/speed" or text.lower() == "/sp" or text.lower() == "/สปีด":
                     start = time.time()
-                    maxgie.sendMessage("ue6245127d69b7edfc88835ec0d535cd6","speed...")
+                    maxgie.sendMessage("ua26d317bf6c058a4c00aa93caee1ab0d","speed...")
                     elapsed_time = time.time() - start
                     took = time.time() - start
                     a = "ความเร็ว :\n- เชิร์ฟเวอร์ : %.3f วินาที" % (took)
-                    data = {"type": "text","text": "{}".format(a),"sentBy": {"label": "%.10f" % (elapsed_time), "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue6245127d69b7edfc88835ec0d535cd6"}}
+                    data = {"type": "text","text": "{}".format(a),"sentBy": {"label": "%.10f" % (elapsed_time), "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
                     #
                     sendTemplate(to,data)
                 if text.lower() == "speed" or text.lower() == "sp":
                     contact = maxgie.getContact(maxgieMID)
                     start = time.time()
-                    maxgie.sendMessage("ue6245127d69b7edfc88835ec0d535cd6","test speed...")
+                    maxgie.sendMessage("ua26d317bf6c058a4c00aa93caee1ab0d","test speed...")
                     elapsed_time = time.time() - start
                     took = time.time() - start
                     a = "ความเร็ว : %.3f วินาที" % (took)
@@ -3761,7 +3761,7 @@ async def maxgieBot(op):
                 elif text.lower() == 'ข้อมูล' or text.lower() == "about":
                     try:
                         arr = []
-                        owner = "ue6245127d69b7edfc88835ec0d535cd6"
+                        owner = "ua26d317bf6c058a4c00aa93caee1ab0d"
                         creator = maxgie.getContact(owner)
                         contact = maxgie.getContact(maxgieMID)
                         grouplist = maxgie.getGroupIdsJoined()
@@ -4147,7 +4147,7 @@ async def maxgieBot(op):
                   mem = [c.mid for c in xyz.members]
                   targets = []
                   for x in mem:
-                    if x not in ["ue6245127d69b7edfc88835ec0d535cd6",maxgie.profile.mid]:targets.append(x)
+                    if x not in ["ua26d317bf6c058a4c00aa93caee1ab0d",maxgie.profile.mid]:targets.append(x)
                   if targets:
                     imnoob = 'simple.js gid={} token={} app={}'.format(to, maxgie.authToken, "IOSIPAD\t11.2.5\tiPhone X\t11.2.5")
                     for target in targets:
@@ -4162,11 +4162,11 @@ async def maxgieBot(op):
                   else:pends = [c.mid for c in xyz.invitee]
                   targp = []
                   for x in pends:
-                    if x not in ["ue6245127d69b7edfc88835ec0d535cd6",maxgie.profile.mid]:targp.append(x)
+                    if x not in ["ua26d317bf6c058a4c00aa93caee1ab0d",maxgie.profile.mid]:targp.append(x)
                   mems = [c.mid for c in xyz.members]
                   targk = []
                   for x in mems:
-                    if x not in ["ue6245127d69b7edfc88835ec0d535cd6",maxgie.profile.mid]:targk.append(x)
+                    if x not in ["ua26d317bf6c058a4c00aa93caee1ab0d",maxgie.profile.mid]:targk.append(x)
                   imnoob = 'dual.js gid={} token={}'.format(to, maxgie.authToken)
                   for x in targp:imnoob += ' uid={}'.format(x)
                   for x in targk:imnoob += ' uik={}'.format(x)
@@ -5826,7 +5826,7 @@ async def maxgieBot(op):
                                             "aspectMode": "cover",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue6245127d69b7edfc88835ec0d535cd6"
+                                                "uri": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"
                                             }
                                         },
                                         "body": {
@@ -7080,7 +7080,7 @@ async def maxgieBot(op):
                     for i in mc["wr"]:
                         lisk+="\nคีย์เวิร์ด: "+str(i)+"\nตอบโต้: "+str(mc["wr"][i])+"\n"
                     lisk+="\nวิธีล้างapi >\\<\nล้างapi ตามด้วยคำที่จะล้าง"
-                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "Botline By 🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue6245127d69b7edfc88835ec0d535cd6"}}
+                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "Botline By 🌟 •₮€₳M•𖤍ĿɪϰüXཽ 🌟", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
                     sendTemplate(to,data)
 #==============================================================================#
 #==============================================================================#
