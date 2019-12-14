@@ -37,7 +37,7 @@ except ImportError:
 #        token = tokens.read()
 #    print(str(token))
 #except Exception as e:
-maxgie = LINE()
+#maxgie = LINE()
 maxgie = LINE()
 maxgie.log("Auth Token : " + str(maxgie.authToken))
 
@@ -46,15 +46,15 @@ settingsOpen = codecs.open("max.json","r","utf-8")
 imagesOpen = codecs.open("image.json","r","utf-8")
 stickersOpen = codecs.open("sticker.json","r","utf-8")
 apaloOpen = codecs.open("HnumBots.json","r","utf-8")
-YoBots = json.load(apaloOpen)
+HnumBots = json.load(apaloOpen)
 wait = json.load(waitOpen)
 images = json.load(imagesOpen)
 settings = json.load(settingsOpen)
 stickers = json.load(stickersOpen)
 #==============================================================================#
-maxgieMID = maxgie.profile.mid
-maxgieProfile = maxgie.getProfile()
-maxgieSettings = maxgie.getSettings()
+#maxgieMID = maxgie.profile.mid
+#maxgieProfile = maxgie.getProfile()
+#maxgieSettings = maxgie.getSettings()
 #==============================================================================#
 maxgieMID = maxgie.profile.mid
 maxgieProfile = maxgie.getProfile()
@@ -203,10 +203,10 @@ RfuCctv={
     "sidermem":{}
 }
 
-user1 = maxgieMID
+#user1 = maxgieMID
 user2 = ""
 allrepositories = [maxgie]
-setTime = {}
+#setTime = {}
 setTime = rfuSet['setTime']
 
 contact = maxgie.getProfile() 
