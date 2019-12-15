@@ -3597,7 +3597,7 @@ async def maxgieBot(op):
                       }
                     sendTemplate(to, data)
                 elif text.lower() == "รีบอท" or text.lower() == "reset":
-                    gifnya = ["https://www.img.live/images/2019/11/21/2ac721.jpg"]
+                    gifnya = ["https://www.img.live/images/2019/12/15/FB_IMG_1569829435112.jpg"]
                     data = {
                         "type": "template",
                         "altText": "กำลังรีบอท...",
@@ -3609,7 +3609,7 @@ async def maxgieBot(op):
                                      "size": "full",
                                      "action": {
                                          "type": "uri",
-                                          "uri": "line://ti/p/~ua26d317bf6c058a4c00aa93caee1ab0d"
+                                          "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                      }
                                 }
                             ]
