@@ -3609,7 +3609,7 @@ async def maxgieBot(op):
                                      "size": "full",
                                      "action": {
                                          "type": "uri",
-                                          "uri": "line://ti/p/~ua26d317bf6c058a4c00aa93caee1ab0d"
+                                          "uri": "https://line.me/ti/p/9P3vQS2cgd"
                                      }
                                 }
                             ]
