@@ -591,8 +591,8 @@ def load():
 #    with open("stickerz.json","r") as fp:
 #        stickerz = json.load(fp)
 def black(target):
-    if target not in YoBots["Talkblacklist"]:
-        YoBots["Talkblacklist"][target] = True
+    if target not in HnumBots["Talkblacklist"]:
+        HnumBots["Talkblacklist"][target] = True
         banned()
 def anuchai(max, text):
     cover = maxgie.getProfileCoverURL(maxgieMID)
@@ -836,8 +836,8 @@ def sendMessageWithMention(to, maxgieMID):
         logError(error)    
 #=====================================================================
 def banned():
-    with open('YoBots.json', 'w') as fp:
-        json.dump(YoBots, fp, sort_keys=True, indent=4)
+    with open('HnumBots.json', 'w') as fp:
+        json.dump(HnumBots, fp, sort_keys=True, indent=4)
 def backupData():
     try:
         backup = settings
@@ -852,8 +852,8 @@ def backupData():
         backup = wait
         f = codecs.open('Max2.json','w','utf-8')
         json.dump(backup, f, sort_keys=True, indent=4, ensure_ascii=False)
-        backup = YoBots
-        f = codecs.open('YoBots.json','w','utf-8')
+        backup = HnumBots
+        f = codecs.open('HnumBots.json','w','utf-8')
         json.dump(backup, f, sort_keys=True, indent=4, ensure_ascii=False)
         return True
     except Exception as error:
@@ -970,7 +970,7 @@ async def maxgieBot(op):
 #                Inviter = op.param3.replace("",',')
 #                InviterX = Inviter.split(",")
 #                matched_list = []
-#                for tag in YoBots["blacklist"]:
+#                for tag in HnumBots["blacklist"]:
 #                    matched_list+=[str for str in InviterX if str == tag]
 #                if matched_list == []:
 #                    pass
@@ -1186,7 +1186,7 @@ async def maxgieBot(op):
         if op.type == 19:
             if op.param1 in protectkick:
                 if op.param2 not in maxgieMID:
-                    YoBots["blacklist"][op.param2] = True
+                    HnumBots["blacklist"][op.param2] = True
                     maxgie.kickoutFromGroup(op.param1,[op.param2])
                 else:
                     pass
@@ -1194,9 +1194,9 @@ async def maxgieBot(op):
         if op.type == 17:
             if op.param1 in protectjoin:
                 if op.param2 not in maxgieMID:
-                    YoBots["blacklist"][op.param2] = True
+                    HnumBots["blacklist"][op.param2] = True
                     try:
-                        if op.param3 not in YoBots["blacklist"]:
+                        if op.param3 not in HnumBots["blacklist"]:
                         	maxgie.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         pass
@@ -1230,9 +1230,9 @@ async def maxgieBot(op):
         if op.type == 32:
             if op.param1 in protectcancel:
                 if op.param2 not in maxgieMID:
-                    YoBots["blacklist"][op.param2] = True
+                    HnumBots["blacklist"][op.param2] = True
                     try:
-                        if op.param3 not in YoBots["blacklist"]:
+                        if op.param3 not in HnumBots["blacklist"]:
                             maxgie.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         pass                                                     
@@ -1304,32 +1304,32 @@ async def maxgieBot(op):
                 if msg.toType == 0 and sender != maxgieMID: to = sender
                 else: to = receiver
                 if msg._from not in maxgieMID:
-                  if YoBots["talkban"] == True:
-                    if msg._from in YoBots["Talkblacklist"]:
+                  if HnumBots["talkban"] == True:
+                    if msg._from in HnumBots["Talkblacklist"]:
                         maxgie.sendMention(to, "คุณติดดำผมอยู่นะครับ @! :)","",[msg._from])
                         maxgie.kickoutFromGroup(msg.to, [msg._from]) 
                 if msg.contentType == 13:
-                  if YoBots["Talkwblacklist"] == True:
+                  if HnumBots["Talkwblacklist"] == True:
                     if msg._from in admin:
-                      if msg.contentMetadata["mid"] in YoBots["Talkblacklist"]:
+                      if msg.contentMetadata["mid"] in HnumBots["Talkblacklist"]:
                           maxgie.unsendMessage(msg_id)
                           duc1(to, "🦋 มีอยู่แล้ว 🦋")
-                          YoBots["Talkwblacklist"] = False
+                          HnumBots["Talkwblacklist"] = False
                       else:
-                          YoBots["Talkblacklist"][msg.contentMetadata["mid"]] = True
-                          YoBots["Talkwblacklist"] = False
+                          HnumBots["Talkblacklist"][msg.contentMetadata["mid"]] = True
+                          HnumBots["Talkwblacklist"] = False
                           maxgie.unsendMessage(msg_id)
                           duc1(to, "🦋เพิ่มบัญชีนี้ในรายการสีดำเรียบร้อยแล้ว??")
                           banned()
-                  if YoBots["Talkdblacklist"] == True:
+                  if HnumBots["Talkdblacklist"] == True:
                     if msg._from in admin:
-                      if msg.contentMetadata["mid"] in YoBots["Talkblacklist"]:
-                          del YoBots["Talkblacklist"][msg.contentMetadata["mid"]]
+                      if msg.contentMetadata["mid"] in HnumBots["Talkblacklist"]:
+                          del HnumBots["Talkblacklist"][msg.contentMetadata["mid"]]
                           maxgie.unsendMessage(msg_id)
                           duc1(to, "🦋เพิ่มบัญชีนี้ในรายการสีขาวเรียบร้อยแล้ว🦋")
-                          YoBots["Talkdblacklist"] = False
+                          HnumBots["Talkdblacklist"] = False
                       else:
-                          YoBots["Talkdblacklist"] = False
+                          HnumBots["Talkdblacklist"] = False
                           maxgie.unsendMessage(msg_id)
                           duc1(to, "🦋ไม่สามารถใช้ได้ในบัญชีดำ🦋")
                           banned()
@@ -1513,7 +1513,7 @@ async def maxgieBot(op):
                     }
                     sendTemplate(to, data)
                 elif text.lower() == 'clearban' or text.lower() == "ล้างดำ":
-                      YoBots["Talkblacklist"] = {}
+                      HnumBots["Talkblacklist"] = {}
                       duc1(to, "🦋 สำเร็จ >_< 🦋")
                       banned()
                 elif msg.text in ["ดึง"]:
@@ -1558,11 +1558,11 @@ async def maxgieBot(op):
                                     maxgie.leaveGroup(receiver)                                    
                 elif text.lower() == "คทดำ":
                     if msg._from in maxgieMID:
-                        if YoBots["Talkblacklist"] == {}:
+                        if HnumBots["Talkblacklist"] == {}:
                             maxgie.unsendMessage(msg_id)
                             duc1(to, "🦋 ไม่พบรายติดดำ 🦋")
                         else:
-                            for bl in YoBots["Talkblacklist"]:
+                            for bl in HnumBots["Talkblacklist"]:
                                 maxgie.sendMessage(to, text=None, contentMetadata={'mid': bl}, contentType=13)
                 elif msg.text.lower().startswith("ตั้งสีme "):
                             text_ = removeCmd("ตั้งสีme", text)
@@ -1618,20 +1618,20 @@ async def maxgieBot(op):
                                for target in targets:
                                    if not target in admin:
                                        try:
-                                           YoBots["Talkblacklist"][target] = True
+                                           HnumBots["Talkblacklist"][target] = True
                                            f=codecs.open('b.json','w','utf-8')
-                                           json.dump(YoBots["Talkblacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                                           json.dump(HnumBots["Talkblacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
                                        except:
                                            maxgie.sendReplyMessage(msg.id,to,"พบข้อผิดพลาดที่ไม่ทราบสาเหตุ")
 
                 if text.lower() == "ดำ":
                   if msg._from in admin:
-                      YoBots["Talkwblacklist"] = True
+                      HnumBots["Talkwblacklist"] = True
                       maxgie.unsendMessage(msg_id)
                       duc1(to, "🦋 กรุณาส่ง คท 🦋")
                 if text.lower() == "ขาว":
                   if msg._from in admin:
-                      YoBots["Talkdblacklist"] = True
+                      HnumBots["Talkdblacklist"] = True
                       maxgie.unsendMessage(msg_id)
                       duc1(to, "🦋 กรุณาส่ง คท 🦋")
                 elif "ลงดำ" in msg.text:
@@ -1651,9 +1651,9 @@ async def maxgieBot(op):
                                for target in targets:
 #                                   if not target in Rfu:
                                        try:
-                                           YoBots["Talkblacklist"][target] = True
+                                           HnumBots["Talkblacklist"][target] = True
                                            f=codecs.open('st2__b.json','w','utf-8')
-                                           json.dump(YoBots["Talkblacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                                           json.dump(HnumBots["Talkblacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
                                        except:
                                            duc1(to, "พบข้อผิดพลาดที่ไม่ทราบสาเหตุ")                      
                 elif text.lower().startswith("/exec\n") or "/exec" in msg.text:
@@ -3860,7 +3860,7 @@ async def maxgieBot(op):
                                         lists.append(mention["M"])
                                 for ls in lists:
                                     try:
-                                        YoBots["Talkblacklist"][ls] = True
+                                        HnumBots["Talkblacklist"][ls] = True
                                         duc1(to, '🦋 ลงบัญชีดำเรียบร้อย 🦋\n✯ᴮʸ✯нηυм вσт ℓιηє✯')
                                     except:
                                         pass
@@ -3875,7 +3875,7 @@ async def maxgieBot(op):
                                         lists.append(mention["M"])
                                 for ls in lists:
                                     try:
-                                        del YoBots["Talkblacklist"][ls]
+                                        del HnumBots["Talkblacklist"][ls]
                                         duc1(to, '🦋 ลบออกจากบัญชีดำ 🦋\n✯ᴮʸ✯нηυм вσт ℓιηє✯')
                                     except:
                                         pass                            
@@ -4022,17 +4022,17 @@ async def maxgieBot(op):
     
 #=====================================================================
                 elif text.lower() == "เชคดำ":
-                            if YoBots["Talkblacklist"] == {}:
+                            if HnumBots["Talkblacklist"] == {}:
                               maxgie.unsendMessage(msg_id)
                               duc1(to, "🦋 ไม่พบคนที่เรายัดดำ 🦋\n✯ᴮʸ✯нηυм вσт ℓιηє✯")
                             else:
                               ma = ""
                               a = 0
-                              for m_id in YoBots["Talkblacklist"]:
+                              for m_id in HnumBots["Talkblacklist"]:
                                   a = a + 1
                                   end = '\n'
                                   ma += str(a) + ". " +maxgie.getContact(m_id).displayName + "\n"
-                              maxgie.sendMessage(to,"รายชื่อคนติดดำ :\n\n"+ma+"\nจำนวน %s คนติดดำ" %(str(len(YoBots["Talkblacklist"]))))
+                              maxgie.sendMessage(to,"รายชื่อคนติดดำ :\n\n"+ma+"\nจำนวน %s คนติดดำ" %(str(len(HnumBots["Talkblacklist"]))))
                          
 #=====================================================================
 #                              \\ COMMAND Kick //
@@ -4197,7 +4197,7 @@ async def maxgieBot(op):
                          gMembMids = [contact.mid for contact in group.members]
                          matched_list = []
                          imnoob = 'simple.js gid={} token={} app={}'.format(receiver, maxgie.authToken, "IOSIPAD\t11.2.5\tiPhone X\t11.2.5")
-                         for tag in YoBots["Talkblacklist"]:
+                         for tag in HnumBots["Talkblacklist"]:
                              matched_list+=[str for str in gMembMids if str == tag]
                          if matched_list == []:
                             pass
@@ -4353,7 +4353,7 @@ async def maxgieBot(op):
                          group = maxgie.getGroup(receiver)
                          gMembMids = [contact.mid for contact in group.members]
                          matched_list = []
-                         for tag in YoBots["Talkblacklist"]:
+                         for tag in HnumBots["Talkblacklist"]:
                              matched_list+=[str for str in gMembMids if str == tag]
                          if matched_list == []:
                              maxgie.unsendMessage(msg_id)
@@ -4373,7 +4373,7 @@ async def maxgieBot(op):
                          group = maxgie.getGroup(receiver)
                          gMembMids = [contact.mid for contact in group.members]
                          matched_list = []
-                         for tag in YoBots["Talkblacklist"]:
+                         for tag in HnumBots["Talkblacklist"]:
                              matched_list+=[str for str in gMembMids if str == tag]
                          if matched_list == []:
                              maxgie.unsendMessage(msg_id)
@@ -7015,7 +7015,7 @@ async def maxgieBot(op):
 #==============================================================================#
         if op.type == 19:
             if maxgieMID in op.param3:
-                YoBots["Talkblacklist"][op.param2] = True
+                HnumBots["Talkblacklist"][op.param2] = True
                 banned()
         if op.type == 26 or op.type == 25:
             msg = op.message
