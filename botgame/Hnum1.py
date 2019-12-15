@@ -3597,7 +3597,7 @@ async def maxgieBot(op):
                       }
                     sendTemplate(to, data)
                 elif text.lower() == "รีบอท" or text.lower() == "reset":
-                    gifnya = ["https://www.img.live/images/2019/11/21/2ac721.jpg"]
+                    gifnya = ["https://www.img.live/images/2019/12/15/FB_IMG_1569829435112.jpg"]
                     data = {
                         "type": "template",
                         "altText": "กำลังรีบอท...",
@@ -5820,7 +5820,7 @@ async def maxgieBot(op):
                                         },
                                         "hero": {
                                             "type": "image",
-                                            "url": "https://i.ytimg.com/vi/{}/maxresdefault.jpg".format(music['id']['videoId']),
+                                            "url": "https://www.img.live/images/2019/12/15/FB_IMG_1569829435112.jpg".format(music['id']['videoId']),
                                             "size": "full",
                                             "aspectRatio": "20:13",
                                             "aspectMode": "cover",
