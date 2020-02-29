@@ -44,8 +44,8 @@ msg_send = {}
 temp_flood = {}
 tz = pytz.timezone("Asia/Jakarta")
 timeNow = datetime.now(tz=tz)
-creator = ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']
-adminbots = ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']
+creator = ["uc66e45201d1612eb4ce7b3a86bac4685"]
+adminbots = ["uc66e45201d1612eb4ce7b3a86bac4685"]
 superz = creator + adminbots
 with open('by.json', 'r') as fp:
     wait = json.load(fp)
