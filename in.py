@@ -92,7 +92,7 @@ def backupData():
         return True
     except:
         e = traceback.format_exc()
-        client.sendMessage("u216a12909d301680792bd786f773e720",str(e))
+        client.sendMessage("uc66e45201d1612eb4ce7b3a86bac4685",str(e))
         return False
 
 def sendPost(to, data):
@@ -178,7 +178,7 @@ def menumessage():
                     "•  ลบ @  「ลบลูกค้า」" + "\n" + \
                     "•  /ออน「 เชคออนบอท 」" + "\n" + \
                     "•  /รีบอท >แอดมินสั่ง<" + "\n" + \
-                    "「 ֆҽlßօℓ BY: •₮€₳M•𖤍ĿɪϰüXཽ 」"
+                    "「 ֆҽlßօℓ 」"
     return menuMessage
     
 def clientBot(op):
@@ -215,7 +215,7 @@ def clientBot(op):
                             pass
                         else:
                             cmd = command(text)
-                            if text.lower().startswith('# ') and sender in ['u406577b5a4fc096f85dfbcace7dec8a4']:
+                            if text.lower().startswith('# ') and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 a=subprocess.getoutput(client.mainsplit(msg.text))
                                 k = len(a)//10000
                                 for aa in range(k+1):
@@ -225,16 +225,16 @@ def clientBot(op):
                                     except:
                                         client.sendMessage(to, "Done")
 
-                            if text.lower() == "renew" and sender in ['u406577b5a4fc096f85dfbcace7dec8a4']:
+                            if text.lower() == "renew" and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 try:
                                     sam = {'MSG_SENDER_ICON': "https://os.line.naver.jp/os/p/"+sender,'MSG_SENDER_NAME':  client.getContact(sender).displayName,}                            
                                     client.sendMessage(to, "Update Library Done", contentMetadata=sam)
                                     restartBot()
                                 except:
                                     e = traceback.format_exc()
-                                    client.sendMessage("u406577b5a4fc096f85dfbcace7dec8a4",str(e))
+                                    client.sendMessage("uc66e45201d1612eb4ce7b3a86bac4685",str(e))
 
-                            if text.lower().startswith('เพิ่ม ') and sender in sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower().startswith('เพิ่ม ') and sender in sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     key1 = key["MENTIONEES"][0]["M"]
@@ -247,7 +247,7 @@ def clientBot(op):
                                     else:
                                         sendMention(msg.to, ' 「 Serivce 」\n@! บัญชีผู้ใช้นี้อยู่ในระบบแล้ว',[key1])
                                         
-                            if text.lower().startswith('เพิ่ม1วัน ') and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower().startswith('เพิ่ม1วัน ') and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     key1 = key["MENTIONEES"][0]["M"]
@@ -260,7 +260,7 @@ def clientBot(op):
                                     else:
                                         sendMention(msg.to, ' 「 Serivce 」\n@! บัญชีผู้ใช้นี้อยู่ในระบบแล้ว',[key1])
                                         
-                            if text.lower().startswith('delsb') and sender in ['u406577b5a4fc096f85dfbcace7dec8a4']:
+                            if text.lower().startswith('delsb') and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 sep = text.split(" ")
                                 query = text.replace(sep[0] + " ","")
                                 aa = [a for a in wait['info']]
@@ -278,7 +278,7 @@ def clientBot(op):
                                         sendMention(to, ' 「 Serivce 」\n@! ไม่พบรายชื่อนี้ในระบบ', [listContact])
                                 except:pass
 
-                            if text.lower().startswith('ลบ ') and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower().startswith('ลบ ') and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     key1 = key["MENTIONEES"][0]["M"]
@@ -293,7 +293,7 @@ def clientBot(op):
                                     else:
                                         sendMention(to, ' 「 Serivce 」\n@! ไม่พบรายชื่อนี้ในระบบ', [key1])
 
-                            if text.lower() == 'รายชื่อ' and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower() == 'รายชื่อ' and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 h = [a for a in wait['info']]
                                 k = len(h)//20
                                 for aa in range(k+1):
@@ -309,7 +309,7 @@ def clientBot(op):
                                     sendMention(to, msgas, h[aa*20:(aa+1)*20])
 
                             if text.lower() == 'killall':
-                                if msg._from in ['u3493c05f288ca15d669be2e16269e8f4']:
+                                if msg._from in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                     h = ''
                                     no=0
                                     for a in wait['info']:
@@ -331,7 +331,7 @@ def clientBot(op):
                                 else:
                                     sendMention(to, "「 แจ้งเตือน 」\nคุณได้ทำการออกจากระบบอยู่แล้ว @! ", [sender])
                               else:
-                                sendMention(to, ' 「 เกิดข้อผิดพลาด 」\nHi @!\nไม่พบรายชื่อคุณในระบบ\nโปรดติดต่อแอดมิน @! ', [sender, "u637ee64df76580c741de37cc238fc17b"])
+                                sendMention(to, ' 「 เกิดข้อผิดพลาด 」\nHi @!\nไม่พบรายชื่อคุณในระบบ\nโปรดติดต่อแอดมิน @! ', [sender, "uc66e45201d1612eb4ce7b3a86bac4685"])
 
                             if text.lower() == "ล็อคอิน1":
                                 client.generateReplyMessage(msg.id)
@@ -443,8 +443,8 @@ def clientBot(op):
                                             except:
                                                 pass
                                 else:
-                                    sendMention(to, ' 「 Error 」\nHi @!\nไม่พบรายชื่อคุณในระบบ\nโปรดติดต่อแอดมิน @! ', [sender, "u637ee64df76580c741de37cc238fc17b"])
-                            if text.lower() == 'เพิ่มฉัน' and sender in ['u637ee64df76580c741de37cc238fc17b']:
+                                    sendMention(to, ' 「 Error 」\nHi @!\nไม่พบรายชื่อคุณในระบบ\nโปรดติดต่อแอดมิน @! ', [sender, "uc66e45201d1612eb4ce7b3a86bac4685"])
+                            if text.lower() == 'เพิ่มฉัน' and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 try:
                                     wait['name'][wait['info'][sender]]['pay'] = wait['name'][wait['info'][sender]]['pay']+60*60*24*30
                                     sendMention(to, ' 「 Serivce 」\nHello @! your expired selfbot now {}'.format(humanize.naturaltime(datetime.fromtimestamp(wait['name'][wait['info'][msg._from]]["pay"]))),[msg._from])
@@ -452,10 +452,10 @@ def clientBot(op):
                                     e = traceback.format_exc()
                                     client.sendMessage("u637ee64df76580c741de37cc238fc17b",str(e))
 
-                            if text.lower() == "บายบอท" and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower() == "บายบอท" and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 client.leaveGroup(to)
 
-                            if text.lower().startswith('ต่ออายุ ') and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower().startswith('ต่ออายุ ') and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     key1 = key["MENTIONEES"][0]["M"]
@@ -475,7 +475,7 @@ def clientBot(op):
                                 runtime = format_timespan(runtime)
                                 client.sendMessage(to, "「 Time to ֆҽlßօℓ 」\n"+str(runtime))
                                 
-                            if cmd == 'Jam on'and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if cmd == 'Jam on'and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if xxxs["clock"] == True:
                                     client.sendMessage(msg.to,"already on")
                                 else:
@@ -487,14 +487,14 @@ def clientBot(op):
                                     client.updateProfile(profile)
                                     client.sendMessage(msg.to,"done")
                                     
-                            if cmd == 'Jam off'and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if cmd == 'Jam off'and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if xxxs["clock"] == False:
                                     client.sendMessage(msg.to,"already off")
                                 else:
                                     xxxs["clock"] = False
                                     client.sendMessage(msg.to,"done")
                                     
-                            if cmd == 'up'and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if cmd == 'up'and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 if xxxs["clock"] == True:
                                     now2 = datetime.now()
                                     nowT = datetime.strftime(now2,"(%H:%M)")
@@ -505,7 +505,7 @@ def clientBot(op):
                                 else:
                                     client.sendMessage(msg.to,"Please turn on the name clock")
 
-                            if cmd == 'grouplist'and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if cmd == 'grouplist'and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 groups = client.groups
                                 ret_ = "╭──[ Group List ]"
                                 no = 0 
@@ -521,7 +521,7 @@ def clientBot(op):
                                 sendMention(to, "@!", [clientMid])
 
                             if cmd.startswith('joinme '):
-                              if sender in ["u406577b5a4fc096f85dfbcace7dec8a4","u3493c05f288ca15d669be2e16269e8f4","u637ee64df76580c741de37cc238fc17b"]:
+                              if sender in ["uc66e45201d1612eb4ce7b3a86bac4685"]:
                                text = msg.text.split()
                                number = text[1]
                                if number.isdigit():
@@ -538,7 +538,7 @@ def clientBot(op):
                                     except:
                                         client.sendMessage(msg.to,"I no there baby")
                                     
-                            if text.lower() == "/รีบอท" and sender in ['u406577b5a4fc096f85dfbcace7dec8a4','u637ee64df76580c741de37cc238fc17b']:
+                            if text.lower() == "/รีบอท" and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 try:
                                     sam = {'MSG_SENDER_ICON': "https://os.line.naver.jp/os/p/"+sender,'MSG_SENDER_NAME':  client.getContact(sender).displayName,}                            
                                     client.sendMessage(to, "รีเซ็ตระบบใหม่เรียบร้อบ\n[ล็อคอินใหม่เพื่อเข้าสู่ระบบเชลบอท]​", contentMetadata=sam)
@@ -548,7 +548,7 @@ def clientBot(op):
                                     client.sendMessage("u637ee64df76580c741de37cc238fc17b",str(e))
 
                             if cmd.startswith('invme '):
-                              if sender in ["u637ee64df76580c741de37cc238fc17b"]:
+                              if sender in ["uc66e45201d1612eb4ce7b3a86bac4685"]:
                                 cond = cmd.split(" ")
                                 num = int(cond[1])
                                 gid = client.getGroupIdsJoined()
@@ -556,7 +556,7 @@ def clientBot(op):
                                 client.findAndAddContactsByMid(sender)
                                 client.inviteIntoGroup(gid[num-1],[sender])
 
-                            if cmd.startswith('unsend') and sender in ['u637ee64df76580c741de37cc238fc17b']:
+                            if cmd.startswith('unsend') and sender in ['uc66e45201d1612eb4ce7b3a86bac4685']:
                                 try:
                                     args = text.split(' ')
                                     mes = 0
@@ -579,13 +579,13 @@ def clientBot(op):
 #                                    client.sendMessage(to, '「 Unsend 」\nUnsend {} Message'.format(len(MId)))
                                 except:
                                     e = traceback.format_exc()
-                                    client.sendMessage("u637ee64df76580c741de37cc238fc17b",str(e))
+                                    client.sendMessage("uc66e45201d1612eb4ce7b3a86bac4685",str(e))
             except:
                 e = traceback.format_exc()
-                client.sendMessage("u637ee64df76580c741de37cc238fc17b",str(e))
+                client.sendMessage("uc66e45201d1612eb4ce7b3a86bac4685",str(e))
     except:
         e = traceback.format_exc()
-        client.sendMessage("u637ee64df76580c741de37cc238fc17b",str(e))
+        client.sendMessage"uc66e45201d1612eb4ce7b3a86bac4685",str(e))
 
 def a2():
     now2 = datetime.now()
